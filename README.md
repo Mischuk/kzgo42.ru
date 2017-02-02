@@ -1,9 +1,9 @@
-# Project
+# КЗГО42
 
 ## Демо
-Смотреть: [frontende.info/project](http://frontende.info/project)
+Смотреть: [frontende.info/kzgo42.ru](http://frontende.info/kzgo42.ru)
 
-Скачать: [project-master.zip](https://github.com/Mischuk/project/archive/master.zip)
+Скачать: [kzgo42.ru-master.zip](https://github.com/Mischuk/kzgo42.ru/archive/master.zip)
 
 ## Описание
 * Сборщик [Gulp](http://gulpjs.com/)

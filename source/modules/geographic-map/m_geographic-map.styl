@@ -1,0 +1,35 @@
+.m_geographic-map
+  clearfix()
+  margin-top 15px
+  .section-title
+    padding-top 45px
+    border-top 1px solid #e6e6e6
+  article
+    padding-bottom 25px
+    margin-bottom 45px
+    border-bottom 1px solid #e6e6e6
+  #mapObjects
+    height 320px
+    width 100%
+    margin-bottom 25px
+    @media MD
+      height 500px
+  .placemark-link
+    display inline-block
+    vertical-align middle
+    font-size 14px
+    color $blue
+    text-decoration underline
+    padding-left 15px
+    padding-right 10px
+    margin-top 10px
+    &:hover
+      color #111
+      text-decoration none
+  .placemark-desc
+    max-width 300px
+    padding-left 15px
+    padding-bottom 15px
+    font-size 14px
+    line-height 20px
+    color #494846

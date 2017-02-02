@@ -1,0 +1,65 @@
+.m_products
+  clearfix()
+  .item
+    clearfix()
+    height 150px
+    margin-bottom 20px
+    @media XS
+      height 220px
+    @media SM
+      float left
+      width 50%
+      padding-left 10px
+      &:nth-child(2n+1)
+        padding-left 0
+        padding-right 10px
+    @media LG
+      height 300px
+      padding-left 15px
+      margin-bottom 30px
+      &:nth-child(2n+1)
+        padding-left 0
+        padding-right 15px
+    &:hover
+      .image a
+        filter grayscale(0)
+    .image
+      float left
+      width 40%
+      height 100%
+      @media XS
+        width 45%
+      @media MD
+        width 55%
+      a
+        anim()
+        display block
+        width 100%
+        height 100%
+        background-repeat no-repeat
+        background-position 50%
+        background-size cover
+        filter grayscale(1)
+    .desc
+      float right
+      width 60%
+      height 100%
+      background #fff
+      padding-left 20px
+      border 1px solid #ebebeb
+      border-left none
+      @media XS
+        width 55%
+      @media MD
+        width 45%
+      a
+        color #333
+        font-size 18px
+        line-height 1
+        border-bottom 1px solid rgba(0,0,0,.2)
+        @media XS
+          font-size 24px
+          line-height 34px
+        &:hover
+          color $red
+          border-color transparent

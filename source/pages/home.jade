@@ -1,0 +1,119 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Главная
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .m_lead-carousel
+    - each post in lead_carousel
+      .slide(style="background-image: url(#{post.image})")
+        .wrapper
+          .vertical-outer
+            .vertical-inner
+              h2 #{post.title}
+              p #{post.desc}
+              .details: a(href="#") Подробнее
+  .m_products-list
+    .wrapper
+      .section-title
+        h2 Наша продукция
+        .details
+          a(href="#") Смотреть всё
+      .row
+        .column
+          .item
+            a(href="#" style="background-image: url('images/content/products/1.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Комплексы перестановки вагонеток
+        .column
+          .item
+            a(href="#" style="background-image: url('images/content/products/2.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Комплексы бадьевые
+        .column.small
+          .item
+            a(href="#" style="background-image: url('images/content/products/3.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Подвесные устройства
+          .item
+            a(href="#" style="background-image: url('images/content/products/4.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Устройства загрузочные
+      .row
+        .column.small
+          .item
+            a(href="#" style="background-image: url('images/content/products/5.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Подвесные устройства
+          .item
+            a(href="#" style="background-image: url('images/content/products/6.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Устройства загрузочные
+        .column
+          .item
+            a(href="#" style="background-image: url('images/content/products/7.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Комплексы перестановки вагонеток
+        .column
+          .item
+            a(href="#" style="background-image: url('images/content/products/8.jpg')")
+              .vertical-outer
+                .vertical-inner
+                  span Комплексы бадьевые
+  .m_lead-pluses
+    .wrapper
+      .section-title
+        h2 Почему выбирают нас
+      .list
+        - each post in pluses
+          .item
+            .icon
+            .desc #{post.desc}
+  .m_help
+    .wrapper
+      .border
+        .text
+          h3
+            span Нужна консультация?
+            i.icon
+          p Задайте нам свой вопрос и мы подробно расскажем о нашей продукции, видах работ и типовых проектах, рассчитаем стоимость и подготовим индивидульное предложение!
+        .info
+          .action: a(class="popup-button" href="#popup-question") Задать вопрос
+          .phone
+            span или связаться с нами по телефону:
+            a(href="tel:+73843204670") +7 (3843) 20-46-70
+  .m_lead-about-article
+    .wrapper
+      .section-title: h2 О компании
+      article
+        p Горно-шахтное оборудование, изготовленное ООО «Киселевский завод горного оборудования», может успешно конкурировать с лучшими зарубежными аналогами. Это оборудование широко применяется на самых эффективных и современных шахтах и рудниках.
+        p С некоторых пор важнейшими факторами для предприятий современной горнодобывающей промышленности стали повышение производительности труда и одновременное снижение аварийности всех видов работ. Для реализации этого стратегического положения требуется максимально высокий уровень автоматизации оборудования и всех производственных процессов.
+  .m_news-carousel
+    .wrapper
+      .section-title
+        h2 Новости
+      .news-carousel
+        - each post in newsCarousel
+          .slide
+            .image: a(href="#" style="background-image: url(#{post.image})")
+            .post-date #{post.date}
+            .title: a(href="#") #{post.title}
+
+
+
+

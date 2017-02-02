@@ -1,0 +1,34 @@
+header.m_header(itemscope itemtype="http://schema.org/Organization")
+  .wrapper
+    .top
+      .logo: a(href="#" title="КЗГО42" itemprop="name")
+      .address
+        .title Наш адрес:
+        .value(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") Кемеровская обл., <span itemprop="addressLocality">г. Киселевск</span>, <br><span itemprop="streetAddress">ул. Проектная, д. 1</span>
+        .at-map: a(href="#"): span Посмотреть на карте
+      .phone
+        a(href="tel:+73843204670" itemprop="telephone") +7 (3843) 20-46-70
+        .callback: a(class="popup-button" href="#popup-callback"): span Связаться с нами
+      .action: a(class="popup-button" href="#popup-list") Отправить опросный лист
+    .bottom
+      .mobile-menu-trigger
+        span
+        b МЕНЮ
+      .nav
+        .sitemap: a(class="popup-button" href="#popup-sitemap")
+          span
+          b Весь сайт
+        .menu
+          ul
+            li: a(href="#"): span Компания
+            li: a(href="#"): span Производство
+            li: a(href="#"): span Продукция
+            li: a(href="#"): span Опросные листы
+            li: a(href="#"): span Контакты
+      .search
+        .search-trigger
+        form
+          input(class="text" id="js-headerSearch" type="text" autocomplete="off" placeholder="Поиск по сайту...")
+          button(type="submit")
+
+

@@ -1,0 +1,68 @@
+$wrapper = 1220px
+$footerDesktop = 535px
+$footerTablet = 575px
+$footerMobile = 395px
+
+html
+  position relative
+  min-height 100%
+body
+  light()
+  font-size 18px
+  line-height 1.2
+  margin-bottom $footerMobile
+  background #fff
+  @media SM
+    margin-bottom $footerTablet
+  @media LG
+    margin-bottom $footerDesktop
+footer
+  height $footerMobile
+  @media SM
+    height $footerTablet
+  @media LG
+    height $footerDesktop
+.content
+  background #f5f5f5
+  margin-top -35px
+  padding-top 45px
+  padding-bottom 25px
+  @media SM
+    padding-bottom 45px
+  main
+    @media SM
+      display block
+      float left
+      width 75%
+      padding-right 20px
+    @media MD
+      width 81%
+      &:last-child
+        width 77%
+  aside
+    margin-top 10px
+    @media SM
+      display block
+      float left
+      width 25%
+      margin-top 0
+    @media MD
+      width 19%
+      &:first-child
+        width 23%
+  aside + main
+    @media SM
+      padding-right 0
+      padding-left 20px
+.wrapper
+  clearfix()
+  position relative
+  max-width $wrapper
+  height 100%
+  padding-left 10px
+  padding-right 10px
+  margin-left auto
+  margin-right auto
+  @media MD
+    padding 0 25px
+

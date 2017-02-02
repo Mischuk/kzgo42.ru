@@ -1,0 +1,128 @@
+.m_popups
+  //- Спасибо за заявку
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-ty")
+    .title Наш менеджер свяжется с Вами в ближайшее время
+  //- Обратный звонок
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-callback")
+    form
+      .title Заказать звонок
+      p Мы свяжемся с Вами в удобное для Вас время
+      .form-row
+        input(type="text" autocomplete="off=" placeholder="Имя" required)
+      .form-row
+        input(class="mask-tel" autocomplete="off=" type="tel" placeholder="Ваш телефон" required)
+      .form-row
+        button(class="submit" type="submit") Отправить
+  //- Отправить опросный лист
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-cost")
+    form
+      .title Рассчитать стоимость
+      p Мы свяжемся с Вами в удобное для Вас время
+      .form-row
+        input(type="text" autocomplete="off=" placeholder="Имя" required)
+      .form-row
+        input(class="mask-tel" autocomplete="off=" type="tel" placeholder="Ваш телефон" required)
+      .form-row
+        input(type="email" autocomplete="off=" placeholder="Email" required)
+      .form-row
+        textarea(placeholder="Сопроводительный текст")
+      .form-row
+        .attach
+          label
+            input(type="file")
+            span.button Добавить файл
+            span.label Файл не приложен
+          .attach-result
+            span.value Файл добавлен!
+            span.remove
+      .form-row
+        button(class="submit" type="submit") Отправить
+  //- Отправить опросный лист
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-list")
+    form
+      .title Отправить опросный лист
+      p Мы свяжемся с Вами в удобное для Вас время
+      .form-row
+        input(type="text" autocomplete="off=" placeholder="Имя" required)
+      .form-row
+        input(class="mask-tel" autocomplete="off=" type="tel" placeholder="Ваш телефон" required)
+      .form-row
+        input(type="email" autocomplete="off=" placeholder="Email" required)
+      .form-row
+        textarea(placeholder="Сопроводительный текст")
+      .form-row
+        .attach
+          label
+            input(type="file")
+            span.button Добавить файл
+            span.label Файл не приложен
+          .attach-result
+            span.value Файл добавлен!
+            span.remove
+      .form-row
+        button(class="submit" type="submit") Отправить
+  //- Задать вопрос
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-question")
+    form
+      .title Задать вопрос
+      p Мы свяжемся с Вами в удобное для Вас время
+      .form-row
+        input(type="text" autocomplete="off=" placeholder="Имя" required)
+      .form-row
+        input(class="mask-tel" autocomplete="off=" type="tel" placeholder="Ваш телефон" required)
+      .form-row
+        input(type="email" autocomplete="off=" placeholder="Email" required)
+      .form-row
+        textarea(placeholder="Вопрос" required)
+      .form-row
+        .attach
+          label
+            input(type="file")
+            span.button Добавить файл
+            span.label Файл не приложен
+          .attach-result
+            span.value Файл добавлен!
+            span.remove
+      .form-row
+        button(class="submit" type="submit") Отправить
+  //- Карта сайта
+  div(class="zoom-anim-dialog mfp-hide popup" id="popup-sitemap")
+    .menu
+      .row
+        .products
+          .title Продукция
+          ul
+            li: a(href="#") Комплексы перестановки вагонеток
+            li: a(href="#") Устройства загрузочные для скипов
+            li: a(href="#") Толкатели шахтовые пневматические
+            li: a(href="#") Трёхроликовые направляющие типа НО
+            li: a(href="#") Комплексы перестановки вагонеток
+            li: a(href="#") Устройства загрузочные для скипов
+          ul
+            li: a(href="#") Комплексы перестановки вагонеток
+            li: a(href="#") Устройства загрузочные для скипов
+            li: a(href="#") Толкатели шахтовые пневматические
+            li: a(href="#") Трёхроликовые направляющие типа НО
+            li: a(href="#") Комплексы перестановки вагонеток
+            li: a(href="#") Устройства загрузочные для скипов
+      .row
+        .columns
+          .column
+            .title: a(href="#") Компания
+            ul
+              li: a(href="#") О компании
+              li: a(href="#") Руководство
+              li: a(href="#") Новости
+              li: a(href="#") Разрешительная документация
+              li: a(href="#") Сертификаты
+          .column
+            .title: a(href="#") Производство
+            ul
+              li: a(href="#") Применяемые технологии
+              li: a(href="#") Основное производство
+              li: a(href="#") Механосборочное производство
+              li: a(href="#") Сварочное производство
+          .column
+            .title: a(href="#") Опросные листы
+          .column
+            .title: a(href="#") Контакты

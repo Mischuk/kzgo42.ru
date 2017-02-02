@@ -1,0 +1,51 @@
+.m_page-nav
+  clearfix()
+  .columns
+    clearfix()
+  .column
+    margin-bottom 30px
+    text-align center
+    @media SM
+      float left
+      width 33.333%
+      padding-left 20px
+      padding-right 20px
+  .image
+    text-align center
+    display inline-block
+    vertical-align middle
+    &:hover + .title a
+      color $red
+      border-color transparent
+    img
+      max-width 100%
+      &.large
+        display none
+        @media XS
+          display inline-block
+          vertical-align middle
+        @media SM
+          display none
+        @media LG
+          display inline-block
+      &.small
+        display inline-block
+        vertical-align middle
+        @media XS
+          display none
+        @media SM
+          display inline-block
+        @media LG
+          display none
+
+  .title
+    text-align center
+    padding-top 10px
+    a
+      anim()
+      color #333
+      font-size 18px
+      border-bottom 1px solid rgba(0,0,0,.2)
+      &:hover
+        color $red
+        border-color transparent

@@ -1,0 +1,119 @@
+.m_news-carousel
+  gutter()
+  position relative
+  .news-carousel
+    margin-top 30px
+    @media SM
+      margin-top 40px
+  .slick-arrow
+    position absolute
+    top -59px
+    width: 42px;
+    height: 37px;
+    font-size 0
+    border none
+    z-index 1
+    background-color transparent
+    background-image url("../images/sprite.png")
+    background-repeat no-repeat
+    background-position -350px -50px
+    retina()
+    @media SM
+      top -77px
+    &:hover
+      background-position -400px -50px
+    &:after
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+      retina()
+      width 18px
+      height 12px
+      margin-left -(@width/2)
+      margin-top -(@height/2)
+    &.slick-next
+      right 0
+      &:after
+        background-position -300px -50px
+      &:hover
+        &:after
+          background-position -250px -50px
+    &.slick-prev
+      right 60px
+      &:after
+        background-position -150px -50px
+      &:hover
+        &:after
+          background-position -200px -50px
+  .slide
+    .image
+      height 145px
+      @media LG
+        height 180px
+      a
+        position relative
+        display block
+        size(100%)
+        background-repeat no-repeat
+        background-position 50%
+        background-size cover
+        &:after
+          anim()
+          content ''
+          position absolute
+          left 0
+          top 0
+          width 100%
+          height 100%
+          background #333
+          opacity 0.2
+        &:hover
+          &:after
+            opacity 0.7
+    .post-date
+      margin 15px 0 10px
+      roman()
+      text-transform uppercase
+      color #999999
+      font-size 12px
+    .title
+      margin-bottom 25px
+      a
+        color #333333
+        font-size 16px
+        line-height 24px
+        border-bottom 1px solid rgba(0,0,0,0.2)
+        &:hover
+          color $red
+          border-color transparent
+  .news-carousel.doubled
+    .slick-slide > div
+      anim()
+      transition-delay .6s
+    .slick-slide.slick-current
+      > div
+        transition all 0s ease-in
+        transition-delay 0
+        padding-right 5px
+      & + .slick-slide > div
+        transition all 0s ease-in
+        transition-delay 0
+        padding-left 5px
+  @media screen and (min-width: 580px)
+    .slick-slide
+      margin 0 5px
+    .slick-list
+      margin 0 -5px
+  @media SM
+    .slick-slide
+      margin 0 10px
+    .slick-list
+      margin 0 -10px
+  @media LG
+    .slick-slide
+      margin 0 15px
+    .slick-list
+      margin 0 -15px

@@ -1,0 +1,84 @@
+.m_lead-pluses
+  gutter()
+  background #fff
+  text-align center
+  .section-title
+    padding-right 0
+    h2
+      float none
+  .list
+    clearfix()
+    .item
+      float left
+      width 50%
+      @media XS
+        width 33.333%
+      @media MD
+        width 16.666%
+      &:nth-child(2n+1)
+        @media screen and (max-width: 567px)
+          clear left
+      &:nth-child(3n+1)
+        @media screen and (max-width: 991px) and (min-width: 568px)
+          clear left
+      .desc
+        medium()
+        font-size 14px
+        line-height 20px
+        @media SM
+          padding-left 30px
+          padding-right 30px
+        @media MD
+          padding-left 5px
+          padding-right 5px
+      .icon
+        position relative
+        width 130px
+        height 127px
+        margin 20px auto
+        background url("../images/pluses-bg-gray.png") no-repeat 0 0
+        &:after
+          content ''
+          position absolute
+          left 50%
+          top 55%
+          background-image url("../images/sprite.png")
+          background-repeat no-repeat
+          retina()
+      &:nth-child(1) .icon:after
+        background-position 0 -250px
+        width 48px
+        height 60px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:nth-child(2) .icon:after
+        background-position -100px -250px
+        width 46px
+        height 60px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:nth-child(3) .icon:after
+        background-position -200px -250px
+        width 60px
+        height 60px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:nth-child(4) .icon:after
+        background-position -300px -250px
+        width 59px
+        height 58px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:nth-child(5) .icon:after
+        background-position -400px -250px
+        width 56px
+        height 56px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+      &:nth-child(6) .icon:after
+        background-position 0 -350px
+        width 56px
+        height 50px
+        margin-left -(@width/2)
+        margin-top -(@height/2)
+

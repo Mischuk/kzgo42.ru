@@ -1,0 +1,46 @@
+.m_paginations
+  border-top 1px solid #c8c8c8
+  padding-top 35px
+  padding-bottom 25px
+  ul
+    width 100%
+    cursor default
+    text-align center
+  li
+    display inline-block
+    vertical-align middle
+    a
+      color #2a75e6
+      font-size 18px
+      display inline-block
+      vertical-align middle
+      line-height 26px
+      height 26px
+      padding 0 2px
+      text-decoration underline
+      @media XS
+        padding 0 10px
+      &.current
+        medium()
+      &.current,
+      &:hover
+        color #333
+        text-decoration none
+    .prev, .next
+      display inline-block
+      vertical-align middle
+      width 30px
+      height 26px
+      padding-left 0
+      padding-right 0
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+      retina()
+    .prev
+      background-position -200px -350px
+      &:hover
+        background-position -200px -400px
+    .next
+      background-position -250px -350px
+      &:hover
+        background-position -250px -400px

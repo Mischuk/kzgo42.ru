@@ -1,0 +1,108 @@
+.m_help
+  gutter()
+  .border
+    clearfix()
+    border 1px solid #eeeeee
+    padding 20px
+    @media MD
+      padding 40px 20px
+  .text
+    text-align center
+    @media SM
+      float left
+      width 60%
+      text-align left
+    @media MD
+      padding-left 30px
+    h3
+      opensans-semibold()
+      font-size 24px
+      line-height 1
+      margin-bottom 20px
+      @media XS
+        font-size 30px
+        padding-top 20px
+      @media SM
+        padding-bottom 10px
+      @media MD
+        font-size 36px
+      @media LG
+        font-size 48px
+        margin-bottom 40px
+      span
+        display inline-block
+        vertical-align middle
+        position relative
+        @media XS
+          padding-right 30px
+        &:after
+          @media XS
+            content ''
+            background: url('../images/sprite.png') no-repeat -200px -100px;
+            width: 40px;
+            height: 37px;
+            retina()
+            position absolute
+            right -15px
+            top -18px
+          @media SM
+            right -30px
+          @media LG
+            width 71px
+            height 66px
+            background-position -100px -350px
+            right -70px
+            top -40px
+    p
+      font-size 16px
+      line-height 24px
+      @media SM
+        margin-bottom 20px
+      @media LG
+        font-size 18px
+        line-height 30px
+  .info
+    text-align center
+    @media SM
+      float left
+      width 40%
+      padding-top 20px
+    @media LG
+      padding-left 80px
+    .action
+      margin-bottom 20px
+      a
+        anim()
+        medium()
+        font-size 16px
+        display inline-block
+        vertical-align middle
+        background $red
+        color #fff
+        padding 15px 30px
+        border-radius $radius
+        @media XS
+          font-size 18px
+          padding 25px 85px
+        @media SM
+          padding 15px 50px
+        @media MD
+          padding 25px 85px
+        &:hover
+          background $button
+    .phone
+      span
+        font-size 14px
+        display block
+        @media XS
+          font-size 16px
+        @media MD
+          margin-top 20px
+          margin-bottom 5px
+          font-size 18px
+      a
+        color #333
+        medium()
+        font-size 26px
+        @media MD
+          font-size 35px

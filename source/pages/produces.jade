@@ -1,0 +1,70 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Применяемые технологии
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .content
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Производство
+          li: span Применяемые технологии
+    .page-title: h2 Применяемые технологии
+    .wrapper
+      main
+        article
+          img(src="images/content/article.png" alt="")
+          p.lead Горно-шахтное оборудование, изготовленное ООО «Киселевский завод горного оборудования», может успешно конкурировать с лучшими зарубежными аналогами. Это оборудование широко применяется на самых эффективных и современных шахтах и рудниках.
+          p Горно-шахтное оборудование, изготовленное ООО «Киселевский завод горного оборудования», может успешно конкурировать с лучшими зарубежными аналогами. Это оборудование широко применяется на самых эффективных и современных шахтах и рудниках.
+          p С некоторых пор важнейшими факторами для предприятий современной горнодобывающей промышленности стали повышение производительности труда и одновременное снижение аварийности всех видов работ. Для реализации этого стратегического положения требуется максимально высокий уровень автоматизации оборудования и всех производственных процессов.
+          .m_carousel
+            .carousel-preview
+              .slide: .image(style="background-image: url('images/content/products/1.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/2.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/3.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/4.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/5.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/6.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/7.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/8.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/7.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/6.jpg')")
+            .carousel-thumbs
+              .slide: .image(style="background-image: url('images/content/products/1.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/2.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/3.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/4.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/5.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/6.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/7.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/8.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/7.jpg')")
+              .slide: .image(style="background-image: url('images/content/products/6.jpg')")
+          p С некоторых пор важнейшими факторами для предприятий современной горнодобывающей промышленности стали повышение производительности труда и одновременное снижение аварийности всех видов работ. Для реализации этого стратегического положения требуется максимально высокий уровень автоматизации оборудования и всех производственных процессов.
+          p Специалисты нашей компании всегда готовы предоставить подробные консультации по подбору и эксплуатации оборудования, необходимую техническую поддержку.
+          p Всё грузоподъемное горно-шахтное оборудование соответствует стандартам «Правилам безопасного производства в шахтах». И делает шахты и рудники, на которых оно используется, в высшей степени эффективными.
+      aside
+        .m_aside-menu
+          ul
+            li: a(href="#") О компании
+            li: a(href="#") Руководство
+            li: a(class="current" href="#") Новости
+            li: a(href="#") Разрешительная документация
+            li: a(href="#") Сертификаты
+        .m_aside-help
+          .text Вы можете получить бесплатную консультацию по интересующему Вас вопросу
+          .info
+            .action: a(class="popup-button" href="#popup-question") Задать вопрос
+            .phone
+              span или связаться с нами по телефону:
+              a(href="tel:+73843204670") +7 (3843) 20-46-70

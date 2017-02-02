@@ -1,0 +1,51 @@
+.m_leadership
+  clearfix()
+  text-align center
+  .column
+    @media screen and (min-width: 500px)
+      display inline-block
+      vertical-align top
+      width 49%
+      margin-bottom 20px
+    @media MD
+      width 32%
+    & + .column
+      margin-top 20px
+      @media screen and (min-width: 500px)
+        margin-top 0
+  .frame
+    position relative
+    width 230px
+    height 265px
+    margin 0 auto
+    .image
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      &:after
+        content ''
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+        background url("../images/mask.png") no-repeat 0 0
+  .desc
+    text-align center
+    margin-top 10px
+    @media screen and (min-width: 500px)
+      padding-left 20px
+      padding-right 20px
+    .name
+      medium()
+      font-size 20px
+      color #000
+    .title
+      font-size 14px
+      color #838383
+      padding 10px 0
+    .details
+      font-size 14px
+      line-height 20px

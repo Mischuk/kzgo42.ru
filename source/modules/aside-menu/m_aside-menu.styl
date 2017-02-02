@@ -1,0 +1,39 @@
+.m_aside-menu
+  background #fff
+  border 1px solid #ebebeb
+  margin-bottom 20px
+  display none
+  @media SM
+    display block
+  ul
+    padding 5px 20px
+    @media LG
+      padding 5px 30px
+    li
+      position relative
+      & + li
+        border-top 1px solid #f0f0f0
+    a
+      anim()
+      color #333
+      font-size 16px
+      line-height 24px
+      display block
+      padding 15px 0
+      &:hover
+        color $red
+      &.current
+        color $red
+        medium()
+      &.current
+        &:after
+          content ''
+          position absolute
+          left -21px
+          top 50%
+          width 4px
+          height 17px
+          margin-top -(@height/2)
+          background $red
+          @media LG
+            left -31px

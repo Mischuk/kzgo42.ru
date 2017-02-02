@@ -1,0 +1,80 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Опросные листы
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .content
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: span Опросные листы
+    .page-title: h2 Опросные листы
+    .wrapper
+      main
+        .m_downloads
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="doc" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="xls" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="doc" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="xls" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="doc" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="xls" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+          .item
+            a(class="pdf" href="#")
+              span.title Опросный лист на дозатор
+              .download: span Скачать
+      aside
+        .m_aside-help
+          .text Вы можете получить бесплатную консультацию по интересующему Вас вопросу
+          .info
+            .action: a(class="popup-button" href="#popup-question") Задать вопрос
+            .phone
+              span или связаться с нами по телефону:
+              a(href="tel:+73843204670") +7 (3843) 20-46-70

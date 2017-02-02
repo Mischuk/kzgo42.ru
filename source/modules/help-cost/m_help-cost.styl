@@ -1,0 +1,65 @@
+.m_help-cost
+  background #fff
+  border 1px solid #eeeeee
+  padding 20px
+  @media MD
+    display table
+    width 100%
+  .text
+    text-align center
+    medium()
+    margin-bottom 10px
+    @media MD
+      display table-cell
+      vertical-align middle
+      width 50%
+      margin-bottom 0
+      font-size 16px
+      line-height 24px
+      text-align left
+    @media LG
+      width 36%
+      padding-right 20px
+  .info
+    text-align center
+    @media MD
+      display table-cell
+      vertical-align middle
+      width 50%
+      text-align left
+      padding-left 20px
+    @media LG
+      width 64%
+    .action
+      margin-bottom 20px
+      margin-top 20px
+      @media MD
+        margin 0
+        display inline-block
+        vertical-align middle
+      a
+        anim()
+        medium()
+        font-size 16px
+        display inline-block
+        vertical-align middle
+        background $red
+        color #fff
+        padding 10px 25px
+        border-radius $radius
+        text-decoration none
+        &:hover
+          background $button
+    .phone
+      @media LG
+        display inline-block
+        vertical-align middle
+        padding-left 20px
+      span
+        font-size 14px
+        display block
+      a
+        color #333
+        medium()
+        font-size 26px
+        text-decoration none

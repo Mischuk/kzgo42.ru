@@ -1,0 +1,204 @@
+.m_popups
+  position relative
+.popup
+  position relative
+  max-width 570px
+  margin 40px auto
+  padding 35px 20px
+  background #fff
+  @media SM
+    padding 50px 60px
+  &#popup-sitemap
+    max-width 970px
+    padding 35px 20px
+    @media MD
+      padding 35px 55px
+  &#popup-ty
+    .title
+      opensans-semibold()
+      font-size 24px
+      color #000
+      @media MD
+        font-size 30px
+  .mfp-close
+    font-size 0
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat 0 0;
+      width: 15px;
+      height: 15px;
+      position absolute
+      left 50%
+      top 50%
+      margin-left -(@width/2)
+      margin-top -(@height/2)
+      retina()
+  .menu
+    .products
+      .title
+        opensans-semibold()
+        font-size 24px
+        line-height 1
+        color #000
+        padding-bottom 15px
+        margin-bottom 15px
+        border-bottom 1px solid #e6e6e6
+        @media screen and (min-width: 480px)
+          font-size 30px
+          margin-bottom 25px
+          padding-bottom 25px
+        @media SM
+          font-size 36px
+      ul
+        @media screen and (min-width: 480px)
+          display inline-block
+          vertical-align top
+          width 49%
+          padding-right 20px
+    .columns
+      clearfix()
+      border-top 1px solid #e6e6e6
+      margin-top 10px
+      @media screen and (min-width: 480px)
+        margin-top 20px
+      @media MD
+        margin-top 10px
+    .column
+      @media screen and (min-width: 480px)
+        display inline-block
+        vertical-align top
+        width 49%
+        padding-right 20px
+      @media SM
+        width 24%
+      .title
+        margin-bottom 15px
+        margin-top 15px
+        @media screen and (min-width: 480px)
+          margin-bottom 25px
+          margin-top 25px
+        a
+          anim()
+          medium()
+          color #000
+          text-transform uppercase
+          font-size 16px
+          border-bottom 1px solid rgba(0,0,0,.2)
+          &:hover
+            color $red
+            border-color transparent
+    ul
+      li
+        margin-bottom 10px
+        @media SM
+          margin-bottom 20px
+        a
+          anim()
+          color #333
+          font-size 16px
+          border-bottom 1px solid rgba(0,0,0,.2)
+          &:hover
+            color $red
+            border-color transparent
+  form
+    .title
+      opensans-semibold()
+      font-size 24px
+      line-height 1
+      color #000
+      margin-bottom 15px
+      @media SM
+        margin-bottom 20px
+        font-size 30px
+    p
+      font-size 16px
+      line-height 24px
+      margin-bottom 15px
+      color #333
+      @media screen and (min-width: 480px)
+        margin-bottom 20px
+    .form-row
+      & + .form-row
+        margin-top 15px
+        @media screen and (min-width: 480px)
+          margin-top 20px
+    input,
+    textarea
+      anim()
+      border 1px solid #e6e6e6
+      font-size 16px
+      color #333
+      font-family 'HelveticaNeueCyr-Light'
+      font-weight normal
+      font-style normal
+      width 100%
+      border-radius $radius
+      padding 15px 20px
+      &:focus
+        border-color #e6e6e6 - 10%
+        box-shadow 1px 1px 3px rgba(100,100,100,.2)
+    textarea
+      min-height 100px
+      resize none
+    button[type=submit]
+      anim()
+      medium()
+      display inline-block
+      vertical-align middle
+      padding 15px 45px
+      border-radius $radius
+      font-size 18px
+      background $button
+      border none
+      color #fff
+      &:hover
+        background $button-hover
+    .attach
+      input[type=file]
+        display none
+      .label
+        font-size 14px
+        color #838383
+        display inline-block
+        vertical-align middle
+      .button
+        anim()
+        position relative
+        display inline-block
+        vertical-align middle
+        margin-right 15px
+        border 1px solid #a0a0a0
+        border-radius $radius
+        padding 14px 30px 14px 50px
+        font-size 16px
+        color #a0a0a0
+        cursor pointer
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -50px 0;
+          width: 21px;
+          height: 21px;
+          position absolute
+          left 15px
+          top 50%
+          margin-top -(@height/2)
+          retina()
+        &:hover
+          border-color #a0a0a0 - 25%
+          color #a0a0a0 - 25%
+      .attach-result
+        line-height 49px
+        font-size 14px
+        color #838383
+        display none
+        .remove
+          margin-left 10px
+          display inline-block
+          vertical-align middle
+          background: url('../images/sprite.png') no-repeat -450px 0;
+          width: 15px;
+          height: 15px;
+          position relative
+          top -1px
+          cursor pointer
+          retina()

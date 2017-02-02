@@ -1,0 +1,47 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Производство
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .content
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: span Производство
+    .page-title: h2 Производство
+    .wrapper
+      .m_products
+          .item
+            .image: a(href="#" style="background-image: url(images/prod-1.png)")
+            .desc
+              .vertical-outer
+                .vertical-inner
+                  a(href="#") Применяемые <br>технологии
+          .item
+            .image: a(href="#" style="background-image: url(images/prod-2.png)")
+            .desc
+              .vertical-outer
+                .vertical-inner
+                  a(href="#") Основное <br>производство
+          .item
+            .image: a(href="#" style="background-image: url(images/prod-3.png)")
+            .desc
+              .vertical-outer
+                .vertical-inner
+                  a(href="#") Механосборочное <br>производство
+          .item
+            .image: a(href="#" style="background-image: url(images/prod-4.png)")
+            .desc
+              .vertical-outer
+                .vertical-inner
+                  a(href="#") Сварочное <br>производство

@@ -1,0 +1,56 @@
+// Mobile burger button
+.mobile-menu-trigger
+  anim()
+  sn()
+  display inline-block
+  vertical-align middle
+  position relative
+  height 100%
+  width 100%
+  z-index 15
+  background #333
+  cursor pointer
+  padding-left 60px
+  line-height 70px
+  @media screen and (min-width: 768px)
+    display none
+  &:after,
+  &:before,
+  span:after,
+  span:before
+    anim()
+    content ''
+    position absolute
+    left 20px
+    width 28px
+    height 1px
+    background #fff
+  &:before
+    top 24px
+  &:after
+    bottom 24px
+  span:before
+    top 50%
+    margin-top -4px
+  span:after
+    bottom 50%
+    margin-bottom -4px
+  b
+    medium()
+    color #fff
+    font-size 14px
+    display inline-block
+    vertical-align top
+    padding-right 20px
+  &.open
+    &:before
+      opacity 0
+      transform translateY(-5px) translateX(5px)
+    &:after
+      opacity 0
+      transform translateY(5px) translateX(-5px)
+    span:after
+      transform rotate(135deg) translate(-3px, 3px)
+    span:before
+      transform rotate(-135deg) translate(-2px, -2px)
+

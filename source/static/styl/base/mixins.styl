@@ -1,0 +1,64 @@
+clearfix()
+  &:before
+  &:after
+    content ''
+    display table
+    clear both
+tsh()
+  text-shadow 1px 1px 3px rgba(0,0,0,.25)
+bsh()
+  box-shadow 1px 1px 3px rgba(0,0,0,.5)
+anim()
+  transition all 0.3s cubic-bezier(.33,.66,.66,1)
+gutter()
+  padding 20px 0
+  @media XS
+    padding 45px 0
+trs(animation)
+  transition animation 0.3s cubic-bezier(.33,.66,.66,1)
+
+retina()
+  @media  only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)
+    background-image url('../images/sprite@2x.png')
+    background-size $sprite
+bg(a, b)
+  background url(a) no-repeat 0 0
+  @media  only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)
+    background-image url(b)
+    background-size @width
+
+size(wh)
+  width wh
+  height wh
+
+sn()
+  -webkit-touch-callout none
+  -khtml-user-select none
+  user-select none
+
+/* Fonts */
+opensans()
+  font-family 'Open Sans', sans-serif
+  font-weight 400
+opensans-semibold()
+  font-family 'Open Sans', sans-serif
+  font-weight 600
+opensans-bold()
+  font-family 'Open Sans', sans-serif
+  font-weight 700
+roman()
+  font-family 'HelveticaNeueCyr-Roman'
+  font-weight normal
+  font-style normal
+bold()
+  font-family 'HelveticaNeueCyr-Bold'
+  font-weight normal
+  font-style normal
+light()
+  font-family 'HelveticaNeueCyr-Light'
+  font-weight normal
+  font-style normal
+medium()
+  font-family 'HelveticaNeueCyr-Medium'
+  font-weight normal
+  font-style normal

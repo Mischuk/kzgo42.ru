@@ -1,0 +1,31 @@
+.m_lead-about-article
+  gutter()
+  @media SM
+    background url("../images/map.png") no-repeat 150px 50%
+  @media MD
+    background-position 300px top
+  @media LG
+    background-position 70% top
+    background-size contain
+  .section-title
+    margin-bottom 40px
+    h2
+      position relative
+      &:after
+        content ''
+        width 85%
+        height 3px
+        background #af0d07
+        position absolute
+        left 0
+        bottom -20px
+        max-width 170px
+  article
+    @media SM
+      padding-right 200px
+    @media screen and (min-width: 900px)
+      padding-right 300px
+    @media screen and (min-width: 1130px)
+      padding-right 400px
+    @media LG
+      padding-right 450px

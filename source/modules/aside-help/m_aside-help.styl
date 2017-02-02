@@ -1,0 +1,92 @@
+.m_aside-help
+  clearfix()
+  background #fff
+  border 1px solid #ebebeb
+  padding 20px
+  @media SM
+    padding 15px
+  @media LG
+    padding 20px
+  .text
+    medium()
+    font-size 16px
+    line-height 24px
+    margin-bottom 20px
+    @media XS
+      padding-right 55px
+      position relative
+    @media SM
+      padding-right 0
+      font-size 14px
+      line-height 1.2
+    @media LG
+      font-size 16px
+      line-height 24px
+      margin-bottom 10px
+    &:after
+      @media XS
+        content ''
+        background: url('../images/sprite.png') no-repeat -200px -100px;
+        width: 40px;
+        height: 37px;
+        position absolute
+        right 0
+        top 0
+        opacity .1
+        retina()
+
+  .info
+    .action
+      margin-bottom 20px
+      @media XS
+        display inline-block
+        vertical-align middle
+        width 175px
+        margin-bottom 0
+      @media SM
+        width 100%
+      a
+        anim()
+        medium()
+        font-size 16px
+        display inline-block
+        vertical-align middle
+        background $red
+        color #fff
+        padding 15px 30px
+        border-radius $radius
+        @media XS
+          font-size 18px
+          width 100%
+          padding-left 0
+          padding-right 0
+          text-align center
+        @media SM
+          font-size 14px
+        @media LG
+          font-size 18px
+        &:hover
+          background $button
+    .phone
+      @media XS
+        display inline-block
+        vertical-align middle
+        padding-left 15px
+      @media SM
+        padding-left 0
+        padding-top 10px
+      span
+        font-size 14px
+        display block
+        color #838383
+        @media SM
+          font-size 11px
+          margin-bottom 2px
+      a
+        color #000
+        medium()
+        font-size 24px
+        @media SM
+          font-size 18px
+        @media LG
+          font-size 20px

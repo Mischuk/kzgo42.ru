@@ -1,0 +1,98 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Контакты
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .content
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: span Контакты
+    .page-title: h2 Контакты
+    .wrapper
+      .m_contacts
+        .row
+          .block(itemscope itemtype="http://schema.org/Organization")
+            .frame
+              .block-row(style="display:none")
+                .label(itemprop="name") ООО «Торговый дом Киселевский завод горного оборудования»
+              .block-row
+                .label Юридический адрес:
+                .value(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") <span itemprop="postalCode">652700</span>, Кемеровская область, <span itemprop="addressLocality">г. Киселевск</span>, <span itemprop="streetAddress">ул. Проектная, д. 1</span>
+              .block-row
+                .label Почтовый адрес:
+                .value(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") <span itemprop="postalCode">652700</span>, Кемеровская область, <span itemprop="addressLocality">г. Киселевск</span>, <span itemprop="streetAddress">а/я 50</span>
+              .block-row
+                .label Телефон:
+                .value
+                  .phone: a(href="tel:+73843204670" itemprop="telephone") +7 (3843) 20-46-70
+                  .phone: a(href="tel:+73843204670" itemprop="telephone") +7 (3843) 20-46-04 <span>— коммерческий отдел</span>
+              .block-row
+                .label Email:
+                .value
+                  a(class="email" href="mailto:manager@kzgo42.ru" itemprop="email") manager@kzgo42.ru
+          .block(itemscope itemtype="http://schema.org/Organization")
+            .frame
+              .block-row
+                .label(itemprop="name") ООО «Торговый дом Киселевский завод горного оборудования»
+              .block-row
+                .label Адрес:
+                .value(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress") <span itemprop="addressLocality">г. Екатиренбург</span>, <span itemprop="streetAddress">ул. Маяковского, д. 25а</span>, оф. 604
+              .block-row
+                .label Телефон:
+                .value
+                  .phone: a(href="tel:+73433459211" itemprop="telephone") +7 (343) 345-92-11
+              .block-row
+                .label Email:
+                .value
+                  a(class="email" href="mailto:tdkzgo@kzgo42.ru" itemprop="email") tdkzgo@kzgo42.ru
+              .block-row
+                .value Генеральный директор — <span itemprop="founder">Томилов Евгений Владимирович</span>
+        .row
+          .form
+            form
+              .title Свяжитесь с нами
+              .form-row
+                .form-column
+                  input(type="text" placeholder="Имя")
+                .form-column
+                  input(type="email" placeholder="Email")
+              .form-row
+                textarea(placeholder="Сообщение")
+              .form-row
+                button(type="submit") Отправить
+          .map
+            script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+            script.
+              var mapIcons = { iconLayout: 'default#image', iconImageHref: 'images/marker.png', iconImageSize: [91, 99], iconImageOffset: [-45, -72], balloonPanelMaxMapArea: 0 };
+              var SPB = [53.980564, 86.717042];
+
+              ymaps.ready(init);
+
+              function init () {
+                  var myMap = new ymaps.Map("map", {
+                          center: SPB,
+                          zoom: 14,
+                          controls: ['zoomControl']
+                      }, {
+                          searchControlProvider: 'yandex#search'
+                      }),
+                      myPlacemark = new ymaps.Placemark([53.980564, 86.717042], {
+                          hintContent: ""
+                      },mapIcons);
+                  myMap.behaviors.disable('scrollZoom');
+                  myMap.geoObjects.add(myPlacemark);
+                  myMap.geoObjects.add(myPlacemark2);
+                  myMap.geoObjects.add(myPlacemark3);
+              }
+            #map

@@ -1,0 +1,71 @@
+.m_downloads
+  clearfix()
+  .item
+    display inline-block
+    vertical-align top
+    width 49%
+    text-align center
+    margin-bottom 30px
+    @media XS
+      width 32%
+    @media SM
+      width 24%
+      margin-bottom 25px
+    a
+      display block
+      padding-top 100px
+      position relative
+      &.pdf
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat 0 -500px;
+          width: 71px;
+          height: 92px;
+          position absolute
+          left 50%
+          top 0
+          margin-left -(@width/2)
+          retina()
+        &:hover:after
+          background-position 0 -600px
+      &.xls
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -200px -500px;
+          width: 71px;
+          height: 92px;
+          position absolute
+          left 50%
+          top 0
+          margin-left -(@width/2)
+          retina()
+        &:hover:after
+          background-position -200px -600px
+      &.doc
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -100px -500px;
+          width: 71px;
+          height: 92px;
+          position absolute
+          left 50%
+          top 0
+          margin-left -(@width/2)
+          retina()
+        &:hover:after
+          background-position -100px -600px
+    .title
+      font-size 14px
+      line-height 20px
+      color #333
+    .download
+      display block
+      text-align center
+      padding-top 5px
+      span
+        font-size 14px
+        color #af0d07
+        border-bottom 1px solid rgba(175, 13, 7, .2)
+        &:hover
+          color $red
+          border-color transparent

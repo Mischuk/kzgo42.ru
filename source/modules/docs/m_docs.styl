@@ -1,0 +1,43 @@
+.m_docs
+  clearfix()
+  img
+    max-width 100%
+  .item
+    float left
+    width 48%
+    margin-left 4%
+    margin-bottom 4%
+    @media screen and (max-width: 991px)
+      &:nth-child(2n+1)
+        margin-left 0
+    @media MD
+      width 31.5%
+      margin-left 2.5%
+      margin-bottom 2.5%
+      &:nth-child(3n+1)
+        margin-left 0
+    a:first-child
+      display block !important
+    a
+      display none
+    a
+      position relative
+    .frame
+      position relative
+      img
+        display block
+        width 100%
+    .img
+      position absolute
+      left 11%
+      top 8%
+      width 78%
+      height 84%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+  .author
+    color #333333
+    font-size 14px
+    text-align center
+    padding-top 5px

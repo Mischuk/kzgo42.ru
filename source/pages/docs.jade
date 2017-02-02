@@ -1,0 +1,80 @@
+extends ../modules/layout/layout.jade
+
+block TITLE
+  title Разрешительная документация
+
+block PG_URL
+  - var MOBILE = 'pg/home_480.jpg';
+  - var TABLET = 'pg/home_960.jpg';
+  - var DESKTOP = 'pg/home_1200.jpg';
+
+block DATABASE
+  include ../static/content/_home.jade
+
+block CONTENT
+  .content
+    .m_breadcrumbs
+      .wrapper
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Компания
+          li: span Разрешительная документация
+    .page-title: h2 Разрешительная документация
+    .wrapper
+      main
+        .m_docs
+          .item
+            a(href="images/content/docs/1.jpg" title="Описание слайда №1")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/1.jpg)")
+            .author Свидетельство СРО
+            a(href="images/content/docs/2.jpg" title="Произвольное описание №2")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/2.jpg)")
+          .item
+            a(href="images/content/docs/2.jpg")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/2.jpg)")
+            .author Свидетельство СРО
+          .item
+            a(href="images/content/docs/3.jpg")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/3.jpg)")
+            .author Свидетельство СРО
+          .item
+            a(href="images/content/docs/4.jpg")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/4.jpg)")
+            .author Свидетельство СРО
+          .item
+            a(href="images/content/docs/5.jpg")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/5.jpg)")
+            .author Свидетельство СРО
+          .item
+            a(href="images/content/docs/2.jpg")
+              .frame
+                img(src="images/docs-frame.png" alt="")
+                .img(style="background-image: url(images/content/docs/2.jpg)")
+            .author Свидетельство СРО
+      aside
+        .m_aside-menu
+          ul
+            li: a(href="#") О компании
+            li: a(href="#") Руководство
+            li: a(class="current" href="#") Новости
+            li: a(href="#") Разрешительная документация
+            li: a(href="#") Сертификаты
+        .m_aside-help
+          .text Вы можете получить бесплатную консультацию по интересующему Вас вопросу
+          .info
+            .action: a(class="popup-button" href="#popup-question") Задать вопрос
+            .phone
+              span или связаться с нами по телефону:
+              a(href="tel:+73843204670") +7 (3843) 20-46-70

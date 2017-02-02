@@ -1,0 +1,30 @@
+.m_breadcrumbs
+  position relative
+  font-size 12px
+  padding-bottom 15px
+  padding-top 5px
+  a
+    text-decoration underline
+    &:hover
+      color #333
+  a, span
+    color #838383
+  ul,
+  span
+    cursor default
+  li
+    position relative
+    display inline-block
+    vertical-align middle
+    & + li
+      padding-left 25px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -300px 0;
+        width: 13px;
+        height: 7px;
+        position absolute
+        left 5px
+        top 50%
+        margin-top -(@height/2)
+        retina()

@@ -1,0 +1,447 @@
+.m_header
+  background #fff
+  height 140px
+  margin-bottom 35px
+  @media MD
+    height 180px
+  @media LG
+    height 195px
+  .top, .bottom
+    clearfix()
+  .top
+    height 100%
+    position relative
+    background #fff
+    z-index 10
+  .bottom
+    position relative
+    height 70px
+    background #333
+    margin-top -35px
+    @media SM
+      z-index 20
+      padding-left 70px
+      padding-right 70px
+    @media MD
+      padding-left 175px
+    @media LG
+      padding-left 225px
+      padding-right 120px
+  .logo
+    float left
+    width 62px
+    height 80px
+    margin-top 10px
+    @media MD
+      width 78px
+      height 100px
+      margin-top 15px
+    @media LG
+      width 101px
+      height 130px
+    a
+      display block
+      width 62px
+      height 80px
+      bg('../images/logo.png', '../images/logo@2x.png')
+      background-size 62px
+      @media MD
+        width 78px
+        height 100px
+        background-size 78px
+      @media LG
+        width 101px
+        height 130px
+        background-size 101px
+  .address
+    display none
+    @media SM
+      position relative
+      display block
+      width 290px
+      float left
+      margin-left 40px
+      padding-left 20px
+      padding-right 20px
+      padding-top 15px
+    @media MD
+      padding-top 20px
+      margin-left 78px
+      margin-top 17px
+    @media LG
+      width auto
+      margin-left 115px
+      margin-top 30px
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -100px 0;
+      width: 26px;
+      height: 31px;
+      position absolute
+      left -15px
+      top 25px
+    br
+      @media LG
+        display none
+    .title
+      font-size 12px
+      color #838383
+      margin-bottom 5px
+    .value
+      color #222222
+      font-size 12px
+      medium()
+      text-transform uppercase
+      @media SM
+        line-height 1.6
+    .at-map
+      a
+        position relative
+        display inline-block
+        vertical-align middle
+        font-size 12px
+        line-height 22px
+        padding-right 20px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -150px 0;
+          width: 13px;
+          height: 7px;
+          position absolute
+          right 0
+          top 50%
+          margin-top -(@height/2)
+        span
+          anim()
+          color $button
+          border-bottom 1px dashed $button
+          &:hover
+            color $red
+            border-color $red
+  .phone
+    position relative
+    float right
+    text-align right
+    margin-top 5px
+    @media XS
+      padding-right 160px
+      margin-top 0
+      padding-top 25px
+      text-align left
+    @media MD
+      padding-right 245px
+      margin-top 15px
+    @media LG
+      padding-right 265px
+      margin-top 30px
+    &:after
+      @media XS
+        content ''
+        background: url('../images/sprite.png') no-repeat -200px 0;
+        width: 20px;
+        height: 31px;
+        position absolute
+        left -28px
+        top 50%
+        margin-top -5px
+    a[href^="tel"]
+      opensans-bold()
+      color #000
+      font-size 20px
+      @media MD
+        font-size 24px
+    .callback
+      a
+        position relative
+        display inline-block
+        vertical-align middle
+        font-size 12px
+        line-height 22px
+        padding-right 20px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -150px 0;
+          width: 13px;
+          height: 7px;
+          position absolute
+          right 0
+          top 50%
+          margin-top -(@height/2)
+        span
+          anim()
+          color $button
+          border-bottom 1px dashed $button
+          &:hover
+            color $red
+            border-color $red
+  .action
+    position absolute
+    right 0
+    bottom 45px
+    @media XS
+      bottom 70px
+    @media MD
+      bottom 85px
+    a
+      anim()
+      medium()
+      position relative
+      display inline-block
+      vertical-align middle
+      background $button
+      color #fff
+      font-size 10px
+      line-height 15px
+      padding 10px
+      border-radius $radius
+      text-transform uppercase
+      @media XS
+        padding 5px
+        padding-left 40px
+        width 140px
+      @media MD
+        width 200px
+        font-size 12px
+        line-height 18px
+        padding-top 11px
+        padding-bottom 11px
+        padding-right 30px
+        padding-left 60px
+      &:after
+        @media XS
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px 0;
+          width: 24px;
+          height: 30px;
+          position absolute
+          left 7.5px
+          top 50%
+          margin-top -15px
+          retina()
+        @media MD
+          left 22px
+      &:hover
+        background $button-hover
+  .nav
+    anim()
+    position absolute
+    left 0
+    top 100%
+    background #333
+    width 100%
+    z-index 1
+    transform translateY(-100%)
+    @media SM
+      position static
+      top 0
+      transform none
+    &.open
+      @media screen and (max-width: 767px)
+        transform translateY(0%)
+    a
+      anim()
+      medium()
+      text-transform uppercase
+      font-size 14px
+      display block
+      padding 15px
+      color #fff
+      &:hover
+        color $red
+    .sitemap
+      @media SM
+        position absolute
+        left 0
+        top 0
+        height 70px
+        line-height 70px
+        width 70px
+      @media MD
+        width 175px
+      @media LG
+        width 193px
+      a
+        display block
+        background $button
+        @media SM
+          width 100%
+          height 100%
+          padding 0
+        &:hover
+          background $button-hover
+          color #fff
+        b
+          font-weight normal
+          @media SM
+            display none
+          @media MD
+            display block
+      @media SM
+        a
+          anim()
+          sn()
+          position relative
+          height 100%
+          width 100%
+          z-index 15
+          cursor pointer
+          padding-left 60px
+          line-height 70px
+          &:after,
+          &:before,
+          span:after,
+          span:before
+            anim()
+            content ''
+            position absolute
+            left 20px
+            width 28px
+            height 1px
+            background #fff
+          &:before
+            top 24px
+          &:after
+            bottom 24px
+          span:before
+            top 50%
+            margin-top -4px
+          span:after
+            bottom 50%
+            margin-bottom -4px
+      @media LG
+        a
+          padding-left 80px
+          &:after,
+          &:before,
+          span:after,
+          span:before
+            left 30px
+    .menu
+      ul
+        @media SM
+          display table
+          width 100%
+          line-height 70px
+      li
+        @media SM
+          display table-cell
+          vertical-align middle
+          text-align center
+          &:first-child a:before
+            display none
+        & + li
+          border-top 1px solid #999999
+          @media SM
+            border-top none
+
+        a
+          @media SM
+            position relative
+            font-size 12px
+            padding 0 10px
+            overflow hidden
+            &:hover
+              span:after
+                transform translateY(0)
+          @media MD
+            font-size 14px
+          &:before
+            @media SM
+              content ''
+              width 1px
+              height 13px
+              background #4b4b4b
+              position absolute
+              left 0
+              top 50%
+              margin-top -7.5px
+          span
+            @media SM
+              position relative
+              display inline-block
+              vertical-align top
+            &:after
+              @media SM
+                anim()
+                content ''
+                width 100%
+                height 3px
+                background #f3322b
+                position absolute
+                left 0
+                bottom 0
+                transform translateY(3px)
+  .search
+    clearfix()
+    position absolute
+    right 0
+    top 0
+    height 100%
+    z-index 15
+    background #333
+    &.open
+      width 100%
+      .search-trigger
+        opacity 0
+      form
+        position relative
+        display block
+        padding-right 70px
+        padding-top 10px
+        padding-left 10px
+        @media LG
+          padding-right 90px
+        input
+          display block
+          width 100%
+          height 50px
+          background #fff
+          padding 10px
+          border none
+          light()
+        button
+          width 70px
+          height 70px
+          position absolute
+          right 0
+          top 0
+          border none
+          background none
+          @media LG
+            width 90px
+          &:after
+            content ''
+            width 30px
+            height 30px
+            bg('../images/search.png', '../images/search@2x.png')
+            position absolute
+            left 50%
+            top 50%
+            margin-left -15px
+            margin-top -15px
+          &:hover
+            &:after
+              background-position 0 -40px
+    .search-trigger
+      width 70px
+      height 70px
+      cursor pointer
+      position relative
+      float right
+      @media LG
+        width 90px
+      &:after
+        content ''
+        width 30px
+        height 30px
+        bg('../images/search.png', '../images/search@2x.png')
+        position absolute
+        left 50%
+        top 50%
+        margin-left -15px
+        margin-top -15px
+      &:hover
+        &:after
+          background-position 0 -40px
+    form
+      display none

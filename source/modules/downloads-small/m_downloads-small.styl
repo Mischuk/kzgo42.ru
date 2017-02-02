@@ -1,0 +1,70 @@
+.m_downloads-small
+  clearfix()
+  border-top 1px solid #c8c8c8
+  border-bottom 1px solid #c8c8c8
+  padding 25px 0
+  margin-bottom 25px
+  .item
+    position relative
+    display inline-block
+    vertical-align top
+    margin 10px 0
+    padding-left 50px
+    min-height 40px
+    @media XS
+      width 49%
+    @media MD
+      width 32%
+    a
+      display table
+      min-height 40px
+      position relative
+      color #333
+      text-decoration none
+      font-size 16px
+      line-height 24px
+      &:hover
+        color $red
+        span
+          border-color transparent
+      .helper
+        display table-cell
+        vertical-align middle
+      span
+        border-bottom 1px solid rgba(0,0,0,.2)
+      &.pdf
+        &:after
+          content ''
+          position absolute
+          left -50px
+          top 0
+          background: url('../images/sprite.png') no-repeat -200px -450px;
+          width: 32px;
+          height: 40px;
+          retina()
+        &:hover:after
+          background-position -250px -450px
+      &.xls
+        &:after
+          content ''
+          position absolute
+          left -50px
+          top 0
+          background: url('../images/sprite.png') no-repeat -300px -450px;
+          width: 32px;
+          height: 41px;
+          retina()
+        &:hover:after
+          background-position -350px -450px
+      &.doc
+        &:after
+          content ''
+          position absolute
+          left -50px
+          top 0
+          background: url('../images/sprite.png') no-repeat -400px -450px;
+          width: 32px;
+          height: 40px;
+          retina()
+        &:hover:after
+          background-position -450px -450px

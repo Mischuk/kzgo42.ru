@@ -1,0 +1,60 @@
+doctype html
+html(lang="ru").no-js
+  head
+    block TITLE
+      title Default title
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    meta(name="description" content="A description of the page")
+    meta(name="subject" content="тематика вашего сайта")
+    meta(name="robots" content="index,follow,noodp")
+    meta(name="googlebot" content="index,follow")
+    meta(name="google" content="nositelinkssearchbox")
+    meta(name="google" content="notranslate")
+    meta(name="rating" content="General")
+    meta(name="format-detection" content="telephone=no")
+    meta(http-equiv='set-cookie' content='name=value; expires=date; path=url')
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet")
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.css")
+    script(src="js/modernizr.js")
+  body
+    - var PG = false
+    block SETTINGS
+    block DATABASE
+    block PG_URL
+    if PG
+      style.
+        html {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          /*background-image: url(#{MOBILE});*/
+        }
+        @media ( min-width: 480px ) {
+          html {
+            background-image: url(#{MOBILE});
+          }
+        }
+        @media ( min-width: 992px ) {
+          html {
+            background-image: url(#{TABLET});
+          }
+        }
+        @media ( min-width: 1200px ) {
+          html {
+            background-image: url(#{DESKTOP});
+          }
+        }
+      link(href="pg/styles.css" rel="stylesheet")
+      script(src="pg/script.js")
+    include ../header/m_header
+    .container
+      block CONTENT
+    include ../footer/m_footer
+    include ../popups/m_popups
+    // Javascript
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")
